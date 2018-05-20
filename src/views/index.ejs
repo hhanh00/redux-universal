@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>React Isomorphic Server Side Rendering Example</title>
+  </head>
+  <body>
+	<h1 id="main-title">Isomorphic Server Side Rendering with React</h1>
+
+    <div id="app">
+        <%- react %>
+    </div>
+
+    <script type="application/javascript">
+        window.__INITIAL_STATE__ = <%- state %>;
+    </script>
+
+	<!-- comment out main.js to see server side only rendering -->
+	<script src="/dist/build.js"></script>
+  </body>
+</html>
