@@ -12,9 +12,9 @@ export const reducer = (state: * = null, action: *) => {
 
 export const inc = async (dispatch: *, getState: *) => {
     const state = getState()
-    const c = state.counter
+    const c = state.counter+1
     await fetch(`/counter?v=${c}`, {
         method: 'POST'
     })
-    dispatch({type: 'SET', counter: c+1})
+    dispatch({type: 'SET', counter: c})
 }

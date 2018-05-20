@@ -21,10 +21,6 @@ module.exports = {
       }
     ]
   },
-  externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM'
-  },
   devServer: {
     historyApiFallback: true,
     noInfo: true,
@@ -36,10 +32,7 @@ module.exports = {
       }
     }
   },
-  devtool: 'source-map',
-  externals: {
-    jquery: 'jQuery'
-  }
+  devtool: 'source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
